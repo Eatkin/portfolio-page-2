@@ -1,0 +1,102 @@
+head:
+  title: "Edward Atkin"
+  og_title: "Edward Atkin's Portfolio"
+  og_description: "Ed is a cool dude"
+  og_image: "data/images/edward-atkin.jpg"
+landing:
+  main-title: "Hey, I'm Ed"
+  tagline: "Python demigod, SQL whisperer, data overlord and professional cat wrangler."
+  social_links:
+    - "[LinkedIn](https://www.linkedin.com/in/eatkin92/)"
+    - "[GitHub](https://github.com/Eatkin)"
+    - "[Email](mailto:edwardatkin@edwardatkin.co.uk)"
+about:
+  title: "About Me"
+  content: |
+    I'm a **Python** and **SQL** wizard who dabbles in JavaScript, C++, HTML and CSS.
+
+    When I'm not coding, I'm **rollerblading**, **juggling**, or **petting my cats**.
+
+    My past gigs include **data ops** engineering, **game dev** team leading, **teaching** data science and even **brewing** beer. Once I was a barman. I've pretty much done it all.
+
+skills:
+  title: "Skills"
+  Professional Wizardry: |
+    - **Languages:** Python (Zeus-tier), SQL (Oracle-tier), JavaScript (When I have no choice), HTML5/CSS3 (Bootstrap is banned), C++ (still learning), Shell (why not)
+    - **Frameworks and Tools:** Flask, PostgreSQL, Docker (a necessary evil), Git, OpenCV, FFmpeg, GCP, Firebase, Regex (I'm not a monster)
+    - **Weird Shit:** Brainfuck, 6502 Assembly
+    - **Other Fancy Stuff:** Test-driven development, game development, machine learning, Vim, automating myself out a job
+  Just for Fun: |
+    - Rollerskating and Surfskating
+    - Juggling (balls, clubs, life decisions)
+    - Random hobby hyperfocussing
+    - Libraries (the kind with books)
+    - Trying not to get fur in my tea (unsuccessfully)
+work:
+  - name: "Current Gig: Data Ops Engineer at Blueskeye AI"
+    content: |
+      At Blueskeye AI I began as a mere Junior before being stripped of the Junior label after three months.
+
+      I overhauled our inefficient annotation platform, building a **robust modular system** for creating annotation tools and migrating our annotation database from **Firestore NoSQL** to **PostgreSQL**. I designed and deployed a scalable, maintainable database and built a **long-term data warehousing solution** for annotation storage.
+
+      I've also processed a hell of a lot of **video data** and automated away all the boring crap with a bespoke **Python library** to make life easier for everyone.
+  - name: "Side Gig: Teaching Assistant at Le Wagon"
+    content: |
+      I teach bootcamp students the ins and outs of **Data Science**. I teach a range of abilities, from those who thought Python was just a snake, right through to those who are deploying real-world projects.
+
+      I work **one on one** with students to help them understand the material, debug their code, and guide them through their projects.
+
+      The bootcamp covers a wide range of topics including **Python**, **SQL**, **Machine Learning**, **Data Visualisation**, and **MLOps**.
+  - name: "Past Gig: Game Development Team Lead at Date & Game"
+    content: |
+      Created and maintained an **online multiplayer framework** for integration with a dating app, with fancy features such as world state synchronisation, **race condition handling**, and **arbitrary resynchronisation**.
+
+      Collaborated with our backend team, pixel artist, and game designer to create memorable experiences for our users.
+
+      **Trained up new recruits** and managed our team's workflow.
+  - name: "Past Gig: Head Brewer at Matlock Worlds Farm Brewery"
+    content: |
+      Before I was a data wizard, I was a **beer wizard**. I managed our brewing schedule, stock levels, and quality control.
+
+      Designed two **award-winning beers** along the way, including one with **Victorian heritage barley Chevallier** (pretty cool, ask me about it).
+projects:
+  - name: "Coding Heaven: A Comedy Coding Blog"
+    content: |
+      Fed up of *drab coding blogs*? Me too. That's why I created [**Coding Heaven**](https://edwardatkin.co.uk/?collection=coding_heaven) - a blog that finds joy in coding.
+
+      I've tackled absurdities such as [**automated stealing of Advent of Code solutions**](https://edwardatkin.co.uk/blog/operation_solution_steal), determining if a number is odd or even in [**Brainfuck**](https://edwardatkin.co.uk/blog/odd_or_even), turning [**Fizz Buzz**](https://edwardatkin.co.uk/blog/fizz_buzz) into something that sounds sort of like music, and creating the universal [**'Hello, World!'**](https://edwardatkin.co.uk/blog/hello_world) equation.
+
+      It's coding, but **fun**.
+  - name: "Blueskeye Annotation Tooling Suite (BATS)"
+    content: |
+      When I began work at Blueskeye, I inherited a web-based annotation tool. It was like a **car with square wheels** (it didn't work very well).
+
+      I rebuilt it using **clean, reusable classes** and **smart inheritance**. The result is a **bespoke, extensible annotation suite** that supports a massive range of tools, lets us deploy new features in **hours (not weeks)**, and handles **hundreds of thousands of annotations** (and no square wheels!).
+
+      Data retrieval times have been **reduced** and refactored to allow videos of any length and filesize to be annotated, removing bottlenecks for files over **10MB**.
+  - name: "Data Processing Python Library"
+    content: |
+      At work I wrangle **video data**. One hell of a lot of video data. After rewriting the same code for the billionth time, I decided to write a **Python library** to do it for me. Every function and feature in the library was built and tested using **test-driven development (TDD)**, because breaking things is best avoided when dealing with **terabytes of data**.
+
+      The result is a library that **simplified complex data processing tasks** down to a mere few lines of code, integrates seamlessly with our annotation data warehouse, and can even be **automated** to continually process data whilst I sleep.
+
+      Errors have been **reduced** by standardising the processing pipelines and with the addition of features such as **auto-rotation** to detect the orientation of videos, resulting in a reduction of both processing time and time lost to mistakes.
+
+      *Laziness truly is the mother of invention*.
+  - name: "Sokobanvania (Working Title)"
+    content: |
+      Ever played **Chip's Challenge**? Ever thought *"what if this game were an open-world metroidvana? Someone should make that"*? Yeah, me too.
+
+      Welcome to **Sokobanvania** - a seamless, dynamically loaded open-world puzzle game that mashes up **block pushing** with **exploration**.
+
+      Features include an **undo system** (sounds lame, actually really difficult to implement) and **childlike coloured pencil artwork**.
+miscellaneous:
+  - "**Codewars Obsessive**: In the top **0.5%** of all [**Codewars**](https://www.codewars.com) users, I'm coming for you **top 0.1%**."
+  - "**Built a CPU (virtually)**: Followed a **Udemy course** covering the design and implementation of a **CPU** using logic gates. Now I sort of know how my computer works."
+  - "**Super Hexagon Perseverer**: I beat it on [**hardestestest difficulty (Hyper Hexagonest)**](https://www.youtube.com/watch?v=n2gz6Wsr6PU), seriously, it was a proud moment."
+  - "**Rollerblading Juggling Extraordinaire**: I used to **rollerblade** regularly, then I broke my hip (totally unrelated, I was on quad skates). I learnt to juggle to fill the void in my heart. I haven't tried to combine the two... yet."
+  - "**Crash Bandicoot, One-Handed Victory**: I beat the original **Crash Bandicoot** on PS1 using only my left hand. I'd played the game about a million times, I had to jazz it up somehow."
+  - "**Barely Profitable Gambler**: I made a [**horse racing predictor**](https://horseracing.edwardatkin.co.uk). Handled the entire pipeline from **data sourcing**, **processing**, and **feature engineering** right through to **model training**, **deployment**, **automated prediction and results data warehousing** and creating a robo-gambler using the **Betfair API**. Boom - **£1.88** profit in its first year, truly living the dream (Don't quit your day job)."
+  - "**Pet Cat Wrangler**: I have two cats, they don't respect my keyboard, they're also the reason I can't have nice things. Somehow I still love them."
+  - "**Vim and Shell Enthusiast**: I use **Vim** btw. It took a year before it was faster than a regular text editor. Worth it? Maybe. Sunk cost fallacy? Definitely. `:w`"
+  - "**Speed Typist**: I once typed at **160WPM** for 15 seconds. If you ever need someone to type something like `SELECT * FROM useless_skills` in 1 second, I'm your guy."

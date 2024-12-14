@@ -1,0 +1,206 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define colours here */
+body {
+  background-color: #20283d;
+  color: #e0f2e6;
+}
+
+header,
+footer {
+  color: #20283d;
+}
+
+header {
+  background: linear-gradient(180deg, #68b4a4 0%, #4e7980 60%, #20283d 100%);
+}
+
+header ul {
+  padding: 0;
+}
+
+footer {
+  background-color: #4e7980;
+  padding: 4em 0 2em 0;
+}
+
+a {
+  color: #00BFFF;
+  position: relative;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #FF6347;
+}
+
+/* line effect with ::after */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 0px;
+  background-color: #FF6347;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
+  height: 2px;
+}
+
+header a,
+footer a {
+  color: #e0f2e6;
+  transition: color 0.3s;
+}
+
+header a:hover,
+footer a:hover {
+  color: #20283d;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.8;
+}
+
+section p {
+  padding-left: 0.5rem;
+  padding-bottom: 0.1rem;
+}
+
+strong {
+  font-size: 1.1rem;
+  color: #FF6347;
+}
+
+a strong {
+  font-size: inherit;
+  color: inherit;
+}
+
+h2 {
+  color: #00BFFF;
+}
+
+h2::first-letter {
+  font-size: 1.5em;
+}
+
+h3:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0 4rem 0;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header .tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+header .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+section {
+  background-color: #20283d;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-color: #68b4a4;
+  box-shadow: inset 0px 2px 5px #68b4a4;
+  margin-top: -1rem;
+}
+
+section:nth-of-type(1) {
+  margin-top: 3rem;
+}
+
+/* Alternating left/right margins */
+section:nth-child(odd) {
+  margin-left: 20%;
+  margin-right: 10%;
+}
+
+section:nth-child(even) {
+  margin-right: 20%;
+  margin-left: 10%;
+}
+
+.centre {
+  width: auto;
+  height: auto;
+}
+
+.centre img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+footer a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.python-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  width: 10%;
+  opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+  section {
+    margin: 3rem auto;
+    max-width: 800px;
+  }
+}
