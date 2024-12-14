@@ -52,7 +52,7 @@ work:
 
         I overhauled our inefficient annotation platform, building a **robust modular system** for creating annotation tools and migrating our annotation database from **Firestore NoSQL** to **PostgreSQL**. I designed and deployed a scalable, maintainable database and built a **long-term data warehousing solution** for annotation storage.
 
-        I process so much *video data** that I dream about FFmpeg. I've automated away all the boring crap with a bespoke **Python library** to make life easier for everyone (but mostly myself).
+        I process so much **video data** that I dream about FFmpeg. I've automated away all the boring crap with a bespoke **Python library** to make life easier for everyone (but mostly myself).
     - name: "Side Gig: Teaching Assistant at Le Wagon"
       content: |
         I teach bootcamp students the ins and outs of **Data Science**. I teach a range of abilities, from those who thought Python was just a snake, right through to those who are deploying real-world projects.
