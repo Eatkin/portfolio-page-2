@@ -141,18 +141,22 @@ section {
   margin-top: -1rem;
 }
 
+.section-head {
+  margin-top: 2rem;
+}
+
 section:nth-of-type(1) {
   margin-top: 3rem;
 }
 
 /* Alternating left/right margins */
 section:nth-child(odd) {
-  margin-left: 20%;
+  margin-left: 15%;
   margin-right: 10%;
 }
 
 section:nth-child(even) {
-  margin-right: 20%;
+  margin-right: 15%;
   margin-left: 10%;
 }
 
@@ -191,16 +195,24 @@ footer a {
 
 .python-logo {
   position: absolute;
-  bottom: 20px;
+  top: 20px;
   right: 10px;
   width: 10%;
   opacity: 0.7;
+  z-index: -1;
 }
 
 
 @media (max-width: 768px) {
-  section {
-    margin: 3rem auto;
-    max-width: 800px;
+
+  /* Alternating left/right margins (smaller margins)*/
+  section:nth-child(odd) {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+
+  section:nth-child(even) {
+    margin-right: 10%;
+    margin-left: 5%;
   }
 }

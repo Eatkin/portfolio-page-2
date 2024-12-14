@@ -12,8 +12,38 @@ def load_template(file):
         return f.read()
 
 def build_page(content, template):
-    for f in [build_head, build_header, build_about, build_skills, build_work, build_projects, build_miscellaneous]:
-        template = f(content, template)
+    html = []
+    for k, v in content.items():
+        if k == "head":
+            template = build_head(content, template)
+        elif k == "landing":
+            template = build_header(content, template)
+        else:
+            if v['title']:
+                html.append(f'<section class="{k} section-head"><h2>{v["title"]}</h2>')
+            for i, item in enumerate(v['sections']):
+                temp = []
+                temp.append(f'<section class="{k}">')
+                if item['name']:
+                    temp.append(f"<h3>{item['name']}</h3>")
+                temp.append(convert(item['content']))
+                temp.append("</section>")
+                # Trim the sections tag if we're using inline html
+                if '<section ' in item['content']:
+                    temp = temp[1:-1]
+                elif i == 0:
+                    temp = temp[1:]
+
+                html.extend(temp)
+
+    # Join html
+    html = "\n".join(html)
+
+    # re.sub it
+    template = re.sub(r'(?<=</header>)(.*?)(?=<footer)', html, template, flags=re.DOTALL)
+
+    template = set_anchor_targets(template)
+
     return template
 
 def build_head(content, template):
@@ -31,58 +61,8 @@ def build_header(content, template):
     template = re.sub(r'(?<=<ul class=\"social-links\">)(.*?)(?=</ul>)', html_list, template, flags=re.DOTALL)
     return template
 
-def build_about(content, template):
-    template = re.sub(r'(<section id="about">.*?<h2>)(.*?)(</h2>)',
-                      lambda match: f'{match.group(1)}{content["about"]["title"]}{match.group(3)}',
-                      template, flags=re.DOTALL)
-    template = re.sub(r'(<section id=\"about\">.*?</h2>)(.*?)(</section>)',
-                      lambda match: f'{match.group(1)}{convert(content["about"]["content"])}{match.group(3)}',
-                      template, flags=re.DOTALL)
-    return template
-
-def build_skills(content, template):
-    title = content['skills'].pop('title')
-    template = re.sub(r'(<section id="skills">.*?<h2>)(.*?)(</h2>)',
-                      lambda match: f'{match.group(1)}{title}{match.group(3)}',
-                      template, flags=re.DOTALL)
-    # Now we want to build up the skills tree from the rest
-    html = ""
-    for k, v in content['skills'].items():
-        html += f'<h3>{k}</h3>'
-        html += convert(v)
-    template = re.sub(r'(<section id=\"skills\">.*?</h2>)(.*?)(</section>)',
-                      lambda match: f'{match.group(1)}{html}{match.group(3)}',
-                      template, flags=re.DOTALL)
-    return template
-
-def build_work(content, template):
-    html = ""
-    for item in content['work']:
-        html += f'<h3>{item["name"]}</h3>'
-        html += convert(item["content"])
-    template = re.sub(r'(<section id="work">.*?<h2>.*?</h2>)(.*?)(</section>)',
-                        lambda match: f'{match.group(1)}{html}{match.group(3)}',
-                        template, flags=re.DOTALL)
-    return template
-
-def build_projects(content, template):
-    html = ""
-    for item in content['projects']:
-        html += f'<h3>{item["name"]}</h3>'
-        html += convert(item["content"])
-    template = re.sub(r'(<section id="projects">.*?<h2>.*?</h2>)(.*?)(</section>)',
-                        lambda match: f'{match.group(1)}{html}{match.group(3)}',
-                        template, flags=re.DOTALL)
-    return template
-
-def build_miscellaneous(content, template):
-    html = ""
-    for item in content['miscellaneous']:
-        html += f'<p>{convert(item)}</p>'
-    template = re.sub(r'(<section id="miscellaneous">.*?<h2>.*?</h2>)(.*?)(</section>)',
-                        lambda match: f'{match.group(1)}{html}{match.group(3)}',
-                        template, flags=re.DOTALL)
-    return template
+def set_anchor_targets(html):
+    return re.sub(r'<a href="http', '<a target="_blank" href="http', html)
 
 if __name__ == '__main__':
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
