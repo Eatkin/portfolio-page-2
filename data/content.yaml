@@ -31,35 +31,38 @@ skills:
   sections:
     - name: "Professional Wizardry"
       content: |
-        - **Languages:** Python (Zeus-tier), SQL (Oracle-tier), JavaScript (When I have no choice), HTML5/CSS3 (Bootstrap is banned), C++ (still learning), Shell (why not)
+        - **Languages:** Python (Zeus-tier), SQL (Oracle-tier), JavaScript (When I have no choice), HTML5/CSS3 (Bootstrap is banned), C++ (still learning), Shell (automating my life)
         - **Frameworks and Tools:** Flask, PostgreSQL, Docker (a necessary evil), Git, OpenCV, FFmpeg, GCP, Firebase, Regex (I'm not a monster)
         - **Weird Shit:** Brainfuck, 6502 Assembly
         - **Other Fancy Stuff:** Test-driven development, game development, machine learning, Vim, automating myself out a job
         <img src="static/images/python.png" alt="Old Python logo" class="python-logo"/>
     - name: "Just for Fun"
       content: |
-        - Rollerskating and Surfskating
-        - Juggling (balls, clubs, life decisions)
-        - Random hobby hyperfocussing
-        - Libraries (the kind with books)
-        - Trying not to get fur in my tea (unsuccessfully)
+        - **Rollerskating** and **Surfskating**
+        - **Juggling** (balls, clubs, life decisions)
+        - **Random hobby hyperfocussing**
+        - **Libraries** (the kind with books)
+        - Trying not to get **fur** in my tea (**unsuccessfully**)
+    - name: ""
+      content: |
+        <section class="centre"><img src="static/images/ed_juggling.png" alt="Juggling some clubs" /></section>
 work:
   title: "Work"
   sections:
     - name: "Current Gig: Data Ops Engineer at Blueskeye AI"
       content: |
-        At Blueskeye AI I began as a mere Junior before being stripped of the Junior label after three months.
+        I started at Blueskeye AI as a *Junior Data Ops Engineer*, but within three months they realised I was too brilliant for the "Junior" tag and ditched it.
 
-        I overhauled our inefficient annotation platform, building a **robust modular system** for creating annotation tools and migrating our annotation database from **Firestore NoSQL** to **PostgreSQL**. I designed and deployed a scalable, maintainable database and built a **long-term data warehousing solution** for annotation storage.
+        I overhauled our inefficient **web-based annotation platform**, building a **sleek, modular system** for creating annotation tools. I also migrated our annotation database from **Firestore NoSQL** to **PostgreSQL**, designing and deploying a scalable, maintainable database and integrating **long-term data warehousing** for annotation storage.
 
-        I process so much **video data** that I dream about FFmpeg. I've automated away all the boring crap with a bespoke **Python library** to make life easier for everyone (but mostly myself).
+        I process so much **video data** that I dream about FFmpeg. I've automated away all the boring crap with a bespoke **Python library** to make life easier for everyone (read: *me*).
     - name: "Side Gig: Teaching Assistant at Le Wagon"
       content: |
         I teach bootcamp students the ins and outs of **Data Science**. I teach a range of abilities, from those who thought Python was just a snake, right through to those who are deploying real-world projects.
 
-        I work **one on one** with students to help them understand the material, debug their code, and guide them through their projects.
+        I work **one on one** with students to help them understand tricky concepts, debug their code, and guide them through their projects. Sometimes I even learn new things myself.
 
-        The bootcamp covers a wide range of topics including **Python**, **SQL**, **Machine Learning**, **Data Visualisation**, and **MLOps**.
+        The bootcamp covers everything from **Python** and **SQL**, to **Machine Learning** and **Data Visualisation**, and even a bit of **MLOps**.
     - name: "Past Gig: Game Development Team Lead at Date & Game"
       content: |
         Created and maintained an **online multiplayer framework** for integration with a dating app, with fancy features such as world state synchronisation, **race condition handling**, and **arbitrary resynchronisation**.
@@ -67,11 +70,16 @@ work:
         Collaborated with our backend team, pixel artist, and game designer to create memorable experiences for our users.
 
         **Trained up new recruits** and managed our team's workflow.
+    - name: ""
+      content: |
+        <section class="centre"><img src="static/images/dateandgame.png" alt="Date and Game multiplayer adventure game" /></section>
     - name: "Past Gig: Head Brewer at Matlock Worlds Farm Brewery"
       content: |
-        Before I was a data wizard, I was a **beer wizard**. I managed our brewing schedule, stock levels, and quality control.
+        Before I became a data wizard, I was a **beer wizard**. I juggled with our brewing schedule, stock levels, and quality control.
 
-        Designed two **award-winning beers** along the way, including **Reverence**, brewed with **Victorian heritage barley Chevallier** (pretty cool, ask me about it).
+        I even designed two **award-winning beers** along the way, including **Reverence**, brewed with **Victorian heritage barley Chevallier**. It's as fancy as it sounds, ask me about it.
+
+        Even though I was a brewer, I still managed to squeeze in a little **VBA** coding to fill in spreadsheets for me.
     - name: ""
       content: |
         <section class="centre"><img src="static/images/reverence.jpg" alt="Master Brewer Carl Heron and I with our collaboration, Reverence" /></section>
@@ -80,9 +88,9 @@ projects:
   sections:
     - name: "Coding Heaven: A Comedy Coding Blog"
       content: |
-        Fed up of *drab coding blogs*? Me too. That's why I created [**Coding Heaven**](https://edwardatkin.co.uk/?collection=coding_heaven) - a blog that finds joy in coding.
+        Fed up of **drab coding blogs**? Me too. That's why I created [**Coding Heaven**](https://edwardatkin.co.uk/?collection=coding_heaven) - a blog that finds joy in coding.
 
-        I've tackled absurdities such as [**automated stealing of Advent of Code solutions**](https://edwardatkin.co.uk/blog/operation_solution_steal), determining if a number is odd or even in [**Brainfuck**](https://edwardatkin.co.uk/blog/odd_or_even), turning [**Fizz Buzz**](https://edwardatkin.co.uk/blog/fizz_buzz) into something that sounds sort of like music, and creating the universal [**'Hello, World!'**](https://edwardatkin.co.uk/blog/hello_world) equation.
+        I've tackled **absurdities** such as [**automated stealing of Advent of Code solutions**](https://edwardatkin.co.uk/blog/operation_solution_steal), determining if a number is odd or even in [**Brainfuck**](https://edwardatkin.co.uk/blog/odd_or_even), turning [**Fizz Buzz**](https://edwardatkin.co.uk/blog/fizz_buzz) into something that sounds **sort of like music**, and creating the universal [**'Hello, World!'**](https://edwardatkin.co.uk/blog/hello_world) equation.
 
         It's coding, but **fun**.
     - name: ""
@@ -104,6 +112,9 @@ projects:
         Errors have been **reduced** by standardising the processing pipelines and adding features such as **auto-rotation** to detect the orientation of videos, resulting in a reduction of both processing time and time lost to mistakes.
 
         *Laziness truly is the mother of invention*.
+    - name: ""
+      content: |
+        <section class="centre"><img src="static/images/desk.jpg" alt="My workspace" /></section>
     - name: "Sokobanvania (Working Title)"
       content: |
         Ever played [**Chip's Challenge**](https://wiki.bitbusters.club/Main_Page)? Ever thought *"what if this game were an open-world metroidvana? Someone should make that"*? Yeah, me too.
