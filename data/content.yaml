@@ -1,8 +1,8 @@
 head:
   title: "Edward Atkin"
   og_title: "Edward Atkin's Portfolio"
-  og_description: "Ed is a cool dude"
-  og_image: "data/images/edward-atkin.jpg"
+  og_description: "Hey, I'm Ed - Python demigod, SQL whisperer, data overlord, and professional cat wrangler. From coding to juggling, I've got it all covered."
+  og_image: "data/images/ed_pigeons.jpg"
 landing:
   main-title: "Hey, I'm Ed"
   tagline: "Python demigod, SQL whisperer, data overlord and professional cat wrangler."
