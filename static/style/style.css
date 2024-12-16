@@ -76,7 +76,10 @@ footer a:hover {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
   line-height: 1.8;
 }
 
@@ -120,6 +123,7 @@ header h1 {
 header .tagline {
   font-size: 1.2rem;
   font-style: italic;
+  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
@@ -193,6 +197,17 @@ footer a {
   border-radius: 4px;
 }
 
+img {
+  border: 2px solid #68b4a4;
+  border-radius: 1em;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.01);
+  filter: grayscale(0.5);
+}
+
 .python-logo {
   position: absolute;
   top: 20px;
@@ -200,6 +215,8 @@ footer a {
   width: 10%;
   opacity: 0.7;
   z-index: -1;
+  border: 0;
+  transition: none;
 }
 
 .frog {
