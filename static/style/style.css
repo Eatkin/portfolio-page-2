@@ -202,6 +202,12 @@ footer a {
   z-index: -1;
 }
 
+.frog {
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+}
+
 
 @media (max-width: 768px) {
 
