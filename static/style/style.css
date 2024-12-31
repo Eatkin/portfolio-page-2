@@ -127,11 +127,13 @@ header .tagline {
   margin-bottom: 1.5rem;
 }
 
-header .social-links {
+header .social-links,
+header .quicklinks {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1em;
 }
 
 section {
@@ -149,10 +151,6 @@ section {
   margin-top: 2rem;
 }
 
-section:nth-of-type(1) {
-  margin-top: 3rem;
-}
-
 /* Alternating left/right margins */
 section:nth-child(odd) {
   margin-left: 15%;
@@ -162,6 +160,10 @@ section:nth-child(odd) {
 section:nth-child(even) {
   margin-right: 15%;
   margin-left: 10%;
+}
+
+section:nth-of-type(1) {
+  margin-top: 3rem;
 }
 
 .centre {
@@ -225,7 +227,6 @@ img:hover {
   margin-top: 3rem;
   border: 0;
 }
-
 
 @media (max-width: 768px) {
 

@@ -20,7 +20,7 @@ def build_page(content, template):
             template = build_header(content, template)
         else:
             if v['title']:
-                html.append(f'<section class="{k} section-head"><h2>{v["title"]}</h2>')
+                html.append(f'<section id="{k}" class="section-head"><h2>{v["title"]}</h2>')
             for i, item in enumerate(v['sections']):
                 temp = []
                 temp.append(f'<section class="{k}">')
@@ -59,6 +59,20 @@ def build_header(content, template):
     for link in content['landing']['social_links']:
         html_list += convert(link)
     template = re.sub(r'(?<=<ul class=\"social-links\">)(.*?)(?=</ul>)', html_list, template, flags=re.DOTALL)
+    # Now fill in the quicklinks which links to the sections
+    sections = {
+        "About Me": "#about",
+        "Skills": "#skills",
+        "Work": "#work",
+        "Feedback": "#feedback",
+        "Projects": "#projects",
+        "Bonus Section": "#miscellaneous",
+        "Other Links": "#links"
+        }
+    html_list = ""
+    for name, link in sections.items():
+        html_list += f'<li><a href="{link}">{name}</a></li>'
+    template = re.sub(r'(?<=<ul class=\"quicklinks\">)(.*?)(?=</ul>)', html_list, template, flags=re.DOTALL)
     return template
 
 def set_anchor_targets(html):

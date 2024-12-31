@@ -29,13 +29,41 @@ img1:
 skills:
   title: "Skills"
   sections:
-    - name: "Professional Wizardry"
+    - name: "Languages"
       content: |
-        - **Languages:** Python (Zeus-tier), SQL (Oracle-tier), JavaScript (Fighting through it), HTML5/CSS3 (Bootstrap is banned), C++ (still learning), Shell (automating my life)
-        - **Frameworks and Tools:** Flask, PostgreSQL, Docker (a necessary evil), Git, OpenCV, FFmpeg, GCP, Firebase, Regex (I'm not a monster)
-        - **Weird Shit:** Brainfuck, 6502 Assembly (Atari 2600), x64/x86 Assembly (Hello World tier)
-        - **Other Fancy Stuff:** Test-driven Development, Game Development, Machine Learning, Vim, Linux, automating everything
+        - **Python**: Zeus-tier. I use Python all day, every day
+        - **SQL**: Oracle-tier. I have experience designing, implementing and maintaining relational databases
+        - **HTML/CSS3**: Working with raw HTML and CSS. Bootstrap is banned.
+        - **JavaScript**: Fighting through it
+        - **C**: Learning the dark arts of pointers and memory management
+        - **C++**: Still learning, but I can make a mean linked list
+        - **Shell**: Automating my life
         <img src="static/images/python.png" alt="Old Python logo" class="python-logo"/>
+    - name: "Frameworks and Tools"
+      content: |
+        - **Flask**: Creating web-apps like my life depends on it (it does)
+        - **PostgreSQL**: My go-to database
+        - **Docker**: A necessary evil
+        - **Git**: Interactive rebase level
+        - **OpenCV and FFmpeg**: I use these so much they haunt my dreams
+        - **Google Cloud Platform and Firebase**: Cloud Run, Cloud Scheduler, App Engine, BigQuery, Cloud Storage, Firestore, all the good stuff
+        - **Regex**: I'm not a monster
+    - name: "Weird Shit"
+      content: |
+        - **Brainfuck**: I once wrote a Brainfuck program that generates Brainfuck programs
+        - **6502 Assembly**: Working with Atari 2600
+        - **x86/x64 Assembly**: Fibonacci sequence-tier
+    - name: ""
+      content: |
+        <section class="centre"><img src="static/images/brainfuck.png" alt="Brainfuck code to tell if a number is odd or even" /></section>
+    - name: "Other Fancy Stuff"
+      content: |
+        - **Test-driven Development**: Because even your *split_list* function probably doesn't work properly
+        - **Game Development**: Creator of many 10s of games, of varying quality
+        - **Machine Learning**: Scikit-Learn and Tensorflow
+        - **Vim**: I refuse to quit
+        - **Linux**: SSHing into dev machines on a regular basis
+        - **Automating everything**: Automation is my reason for existing
     - name: "Just for Fun"
       content: |
         - **Rollerskating** and **Surfskating**
@@ -83,6 +111,18 @@ work:
     - name: ""
       content: |
         <section class="centre"><img src="static/images/reverence.jpg" alt="Master Brewer Carl Heron and I with our collaboration, Reverence" /></section>
+feedback:
+  title: "Feedback"
+  sections:
+    - name: "Student Feedback From Le Wagon"
+      content: |
+        * Looking for a smart, loving and helpful Nerd to fall in love with? It's Edward.
+        * So happy to help always, always sending more resources so we could learn more, thank you so much.
+        * Very creative and helpful, and super responsive. Great problem-solving skills, and on top of every topic.
+        * Edward did his best to help me with my learning struggles and was very supportive. He's one of the TAs that made a difference during the difficult times.
+        * Edward has an eagle eye for coding mistakes. Truly impressive. I can't think of a single time where he did not come up with an idea to help find a solution. Even for Docker (that means something, right :-)?) Thanks Ed!
+        * Edward is great! He's so smart and has so many great tips. It was nice that he recently completed the BootCamp because he had a fresh perspective on what the students were going through.
+        * OMG, Ed, I'll miss him. I can say easly he is the real full-stack person, a swiss knife. He knows about everything related to architechture, data engineetring, coding....and his extra plus, he is super humble.
 projects:
   title: "Projects"
   sections:
@@ -133,7 +173,7 @@ miscellaneous:
         - **Codewars Obsessive**: In the top **0.5%** of all [**Codewars**](https://www.codewars.com) users, I'm coming for you **top 0.1%**.
         - **Built a CPU (virtually)**: Followed a **Udemy course** covering the design and implementation of a **CPU** using logic gates. Now I sort of know how my computer works.
         - **Actually Used a Binary Search Algorithm**: I once used a **binary search algorithm** to have files annotated in order of intensity.
-        - **Created an Assembly Interpreter in Assembly**: An Advent of Code challenge asked for a custom assembly language interpreter. I wrote it in **x64 Assembly**. So it wasn't really an interpreter at all. But it **did work**.
+        - **Actually Used Assembly Once**: An Advent of Code challenge asked for a custom assembly language interpreter. I wrote it in **x64 Assembly**, thus completely missing the point of the challenge.
         - **Barely Profitable Gambler**: I made a [**horse racing predictor**](https://horseracing.edwardatkin.co.uk). Handled the entire pipeline from **data sourcing**, **processing**, and **feature engineering** right through to **model training**, **deployment**, **automated prediction**, results **data warehousing** and creating a **robo-gambler** using the **Betfair API** and a **Raspberry Pi**. Boom - **£1.88** profit in its first year, truly living the dream (Don't quit your day job).
         - **Super Hexagon Perseverer**: I beat Super Hexagon on [**hardestestest difficulty (Hyper Hexagonest)**](https://www.youtube.com/watch?v=n2gz6Wsr6PU), seriously, it was a proud moment.
         - **Rollerblading Juggling Extraordinaire**: I used to **rollerblade** regularly, then I broke my hip (totally unrelated, I was on quad skates). I learnt to juggle to fill the void in my heart. I haven't tried to combine the two... yet.
