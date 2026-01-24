@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrapper">
+  <header>
+    <div class="header-top">
+      <div>
+        <span class="emoji">{{ emojis | random }}</span>
+        <h1>{{ identity.title }}</h1>
+        <div class="tagline">{{ identity.focus }}</div>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/Eatkin" target="_blank">GITHUB</a>
+        <a href="https://www.linkedin.com/in/eatkin92/" target="_blank">LINKEDIN</a>
+        <a href="mailto:edwardatkin@edwardatkin.co.uk">EMAIL</a>
+      </div>
+    </div>
+    <p class="ethos">"{{ identity.ethos }}"</p>
+    <div class="tech-stack">
+      {% for s in identity.strengths %}
+      <span class="tech-tag">{{ s }}</span>
+      {% endfor %}
+    </div>
+  </header>
+  <nav id="jump-nav">
+    <p>Quicklinks:</p>
+    <ul>
+      <li>
+        <a href="#capabilities">[ Ethos ]</a>
+      </li>
+      <li>
+        <a href="#corkboard">[ Highlights ]</a>
+      </li>
+      <li>
+        <a href="#projects">[ Projects ]</a>
+      </li>
+      <li>
+        <a href="#work">[ History ]</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="dual-col">
+    <section id="capabilities">
+      <h2 class="section-title">What I Do</h2>
+      <div class="sticker-grid">
+        {% for item in what_i_do %}
+        <div class="sticker-card">
+          <h3>
+            {{ item.name }}
+            <span class="emoji">{{ emojis | random }}</span>
+          </h3>
+          <p>{{ item.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <section id="modes">
+      <h2 class="section-title">Modes</h2>
+      <div class="mode-list">
+        {% for mode in modes %}
+        <span class="mode-tag">{{ mode }}</span>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+  <section id="corkboard">
+    <h2 class="section-title">Highlights</h2>
+    <div class="corkboard-grid">
+      {% for item in corkboard_diagrams %}
+      <div class="polaroid">
+        <div class="polaroid-title">{{ item.project }}</div>
+        <img src="{{ item.image }}" alt="{{ item.project }}" data-index="{{ loop.index }}">
+        <div class="caption">{{ item.caption }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <div id="corkboard-zoom-hint">
+      <span class="zoom-emoji">🔍</span>
+      <span class="zoom-text">Click images to zoom (or unzoom)</span>
+      <noscript>
+        <p>Actually won't work without JavaScript, sorry.</p>
+      </noscript>
+    </div>
+  </section>
+  <section id="projects">
+    <h2 class="section-title">Selected Systems</h2>
+    <div class="projects-grid">
+      {% for p in projects %}
+      <div class="project-card">
+        <div class="project-header">
+          <span>{{ p.category | upper }}</span>
+          <span>INTERNAL: {{ p.internal | upper if p.internal is defined else "FALSE" }}</span>
+        </div>
+        <div class="project-content">
+          <h3>{{ p.name }}</h3>
+          {% if p.links %}
+          <div class="link-sticker-sheet">
+            {% for label, url in p.links.items() %}
+            <a href="{{ url }}" class="punk-link" target="_blank">
+              <span class="emoji">{{ emojis | random }}</span>
+              {{ label|upper }}
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <p>
+            <strong>Problem:</strong>
+            {{ p.problem }}
+          </p>
+          <p style="margin-top: 10px;">
+            <strong>Solution:</strong>
+            {{ p.solution }}
+          </p>
+          <div class="tech-stack">
+            {% for t in p.tech %}
+            <span class="tech-tag">{{ t }}</span>
+            {% endfor %}
+          </div>
+          <div class="outcome-box">
+            <strong>Outcome:</strong>
+            {{ p.outcome }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section id="work">
+    <h2 class="section-title">History</h2>
+    {% for w in work_history %}
+    <div class="work-item">
+      <h3 class="company-name">{{ w.company }}</h3>
+      <p class="role">
+        <em>{{ w.role }}{% if w.location %} — {{ w.location }}{% endif %}</em>
+        {% if w.period %}
+        <span class="period">({{ w.period }})</span>
+        {% endif %}
+      </p>
+      {% if w.focus %}
+      <ul class="focus-list">
+        {% for f in w.focus %}
+        <li>🡆 {{ f }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+    {% if w.impact %}
+      <div class="outcome-box">
+        {% for i in w.impact %}
+        <li class="outcome-list">• {{ i }}</li>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    {% if w.technologies %}
+      <div class="tech-stack">
+        {% for t in w.technologies %}
+        <span class="tech-tag">{{ t }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  <footer>
+    <span class="emoji">{{ emojis | random }}</span>
+    <p style="margin: 20px 0;">Build with Python & Chaos.</p>
+    <p style="font-size: 0.7rem; color: #fff;">
+      &copy;
+      <script>document.write(new Date().getFullYear())</script>
+      <noscript>2026</noscript>
+      Edward Atkin
+    </p>
+    <noscript id="js-warning">
+      This site works best with JS enabled. Seriously, you're missing out.
+    </noscript>
+  </footer>
+</div>
+<img src="static/images/python.png" alt="Python Logo" class="python-logo">
+<script>
+    const polaroids = document.querySelectorAll('.polaroid');
+    const parentContainer = document.querySelector('#corkboard');
+
+    polaroids.forEach(p => {
+        // No pointer if no JavaScript enabled
+        p.style.cursor = 'pointer';
+        p.addEventListener('click', () => {
+            const isActive = p.classList.contains('active');
+
+            // deactivate all others
+            polaroids.forEach((other, index) => {
+                other.classList.remove('active');
+                other.style.order = index; // restore original order
+            });
+
+            if (!isActive) {
+                p.classList.add('active');
+                p.style.order = -1; // move active to top visually
+                // Scroll into view
+                parentContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+
+    // Override 'jumps' with smooth scrolling if JS enabled for nav
+    document.querySelectorAll('#jump-nav a').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+</script>
+{% endblock %}

@@ -1,2 +1,4 @@
 PyYAML
 marko
+jinja2
+types-PyYAML
