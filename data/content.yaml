@@ -26,18 +26,13 @@ what_i_do:
     desc: "Take ownership of the stack from concept to production."
 
 corkboard_diagrams:
+  - project: "Reddit CLI Dashboard"
+    image: "static/images/reddit_cli.png"
+    caption: "Read-only Reddit from the terminal"
 
-  - project: "Secure Data Platform API"
-    image: "static/images/secure_data_platform.png"
-    caption: "Infrastructure diagram for secure data platform API"
-
-  - project: "Annotation Platform Suite"
-    image: "static/images/desk.jpg"
-    caption: "Having a cup of tea whilst my data processing library does everything"
-
-  - project: "PiAudiobook"
-    image: "static/images/piaudiobook.png"
-    caption: "Offline, voice-controller and FOSS audiobook system powered by Python"
+  - project: "Yarn & Moggy"
+    image: "static/images/yarn_and_moggy.png"
+    caption: "Custom AWS e-commerce stack for £0.03/month"
 
   - project: "Juggling Analytics & Practice"
     image: "static/images/ed_juggling.png"
@@ -52,45 +47,49 @@ corkboard_diagrams:
     caption: "Frankie the cat"
 
 projects:
-  - name: "Secure Data Platform API (Prototype)"
-    category: "Security & Infra"
-    role: "Infrastructure & Identity"
-    problem: "Fragmented workflows, inconsistent database schema and R&D teams reliant on 'snapshot' data requests."
-    solution: "FastAPI gateway with Workload Identity Federation (ADC), user-aware access, SQL-backed database, and Terraform-defined infrastructure. Provides R&D with data 'on-tap' for integration into workflows instead of manual snapshots."
-    architecture: "client → FastAPI → Cloud Run → Cloud SQL / Cloud Storage | Bastion VM for admin access"
-    tech: [python, fastapi, terraform, cloud-run, cloud-storage, sql, adc, gcp, docker]
-    outcome: "Foundational platform for all company data operations; seamless, identity-based access; principle-of-least-privilege; separation of duties; reliable, integrated R&D workflows."
+  - name: "Document Generation Service"
+    category: "Platforms & Tooling"
+    role: "Backend Engineer"
+    problem: "Legacy TypeScript document generation service was poorly written, unmaintainable, and difficult to extend for new document types."
+    solution: "Rewrote the service in Python (FastAPI, Jinja2, WeasyPrint) with Pydantic-validated models, modular templating via Jinja2 extends/includes, and custom brand CSS. Deployed as a Docker container on AWS Lambda via CDK."
+    architecture: "FastAPI → Pydantic validation → Jinja2 templates → WeasyPrint → PDF | Docker Lambda via CDK"
+    tech: [python, fastapi, jinja2, weasyprint, pydantic, docker, aws-lambda, aws-cdk]
+    outcome: "Clean, maintainable service replacing a fragile legacy codebase; consistent branded PDF output; html output for previews; extensible template system for new document types."
     internal: true
 
-  - name: "Annotation Platform Suite"
-    category: "Platforms & Tooling"
-    role: "Platform Engineer"
-    problem: "Existing annotation UI was slow, brittle and experiencing scaling failures. Firestore-based tabular storage hit size limits; tools violated DRY principles and were difficult to maintain."
-    solution: "Rebuilt the platform with a SQL backend, class-based architecture, and a highly configurable data processing library. Enabled end-to-end workflows: select datasets, process, upload and mark for annotation in 4 lines of code with no monitoring required."
-    architecture: "UI → annotation engine → SQL storage → stats pipelines | modular processing library"
-    tech: [python, ffmpeg, gstreamer, sqlite, docker, sql, multiprocessing, cloud-run]
-    outcome: "From 2 fragile tools to 30+ stable, extensible tools. Reduced annotation setup & FACS annotation time ~50%. Removed error-prone ad-hoc scripts, enabled rapid scaling and consistent deployment across studies."
-    internal: true
-
-  - name: "Multimodal Capture Software"
-    category: "Platforms & Tooling"
+  - name: "Lead Generation Scraping Pipeline"
+    category: "Data & Compute"
     role: "Systems Engineer"
-    problem: "Previous lab capture software was unreliable, poorly synchronised and difficult for non-technical operators."
-    solution: "Built a fully offline, touchscreen-driven audio/video capture system with multi-camera support. State-machine-based architecture allowed easy integration of additional sensors (e.g., heart rate monitors) and flexible configuration for new study requirements."
-    architecture: "device drivers → capture engine → synchronized storage → export pipeline | async telemetry integration"
-    tech: [python, pygame, opencv, ffmpeg, hardware, multiprocessing, state-machine]
-    outcome: "Supported 3-camera HD AV capture with audio/video sync; simple interface for non-technical operators; standardised and reliable collection for studies with 60+ participants; modular and extensible for future research needs."
+    problem: "Sales team had no scalable way to identify and qualify leads; prospecting was manual and time-consuming, many phone numbers were disconnected."
+    solution: "Automated web scraping pipeline to extract, normalise and enrich lead data, feeding structured prospect information directly to the sales team."
+    architecture: "scraper → normalisation → enrichment → structured output → sales pipeline"
+    tech: [python, web-scraping, aws, data-pipelines]
+    outcome: "Directly drove sales pipeline value; replaced manual prospecting; delivered structured, actionable lead data at scale."
     internal: true
 
-  - name: "Datapool - Prototype Volunteering Platform"
-    category: "Platforms & Tooling"
+  - name: "Yarn & Moggy E-Commerce Platform"
+    category: "Professional Services"
     role: "Fullstack Systems"
-    problem: "Existing volunteer sign-ups were slow, manual, error-prone, and unscalable."
-    solution: "Privacy-first fullstack platform for study participation with dynamic forms, targeted allocation and admin tooling."
-    architecture: "Admin panel → dynamic forms → Firestore backend → Firebase Auth → transaction-safe allocation"
-    tech: [python, flask, firestore, firebase, gcp, nosql, cloud-run, docker]
-    outcome: "Replaced ad-hoc Google Forms; automated participant management; location-based targeting; race-condition-safe allocations; privacy-first design."
-    internal: true
+    problem: "Off-the-shelf e-commerce SaaS (Shopify) cost £25+/month — unjustifiable for a small handmade goods shop."
+    solution: "Built a fully custom e-commerce platform on AWS: static GitHub Pages frontend with Jinja2 templating, FastAPI backend on Lambda, DynamoDB for orders, S3 for assets, Stripe for payments, Resend for transactional email. Infrastructure managed with AWS CDK."
+    architecture: "GitHub Pages (Jinja2) → API Gateway → Lambda (FastAPI) → DynamoDB / S3 | Stripe → SQS → Resend"
+    tech: [python, fastapi, aws-lambda, dynamodb, s3, stripe, aws-cdk, jinja2, github-pages, SQS]
+    outcome: "Replaced £25/month SaaS with a cloud stack costing pennies per month. Full order management, payment processing, and transactional email — purpose-built and owned end to end."
+    internal: false
+    links:
+      Store: "https://yarnandmoggy.co.uk"
+
+  - name: "Reddit CLI Dashboard"
+    category: "Open Source & Side Projects"
+    role: "Systems Tinkerer"
+    problem: "Wanted intentional, low-noise access to Reddit without the engagement-maximising web UI."
+    solution: "Read-only terminal dashboard built with Textual. Parses Reddit's JSON Feeds and renders a navigable TUI with feeds, post browsing and comment threads."
+    architecture: "Reddit JSON Feeds → parser → Textual TUI → keyboard-driven navigation"
+    tech: [python, textual, tui, reddit-api, json]
+    outcome: "Clean, distraction-free Reddit access from the terminal; no tracking, no ads, no algorithmic feed manipulation."
+    internal: false
+    links:
+      GitHub: "https://github.com/Eatkin/reddit-cli"
 
   - name: "JobLens - Automation Pipeline"
     category: "Data & Compute"
@@ -99,20 +98,8 @@ projects:
     solution: "Scraping, normalisation, NLP scoring, LLM summarisation and automated ranking pipeline."
     architecture: "scraper → vector scoring → ranking → LLM summaries → notifications"
     tech: [python, llm, scraping, cron, sklearn, openai-api, json]
-    outcome: "Fully automated job search; converted unstructured job postings into json data; reduced human workload to decision-making only."
+    outcome: "Fully automated job search; converted unstructured job postings into structured data; reduced human workload to decision-making only."
     internal: false
-
-  - name: "PiAudiobook"
-    category: "Open Source & Side Projects"
-    role: "Systems Engineer"
-    problem: "Locked to proprietary audiobook ecosystems with cloud voice systems; wanted privacy and offline control."
-    solution: "Offline audiobook player with voice control and persistent playback."
-    architecture: "CLI → sqlite metadata → playback engine → offline speech recognition"
-    tech: [python, vosk, sqlite, raspberry-pi, linux]
-    outcome: "Fully offline, privacy-first, modular and portable audiobook experience."
-    internal: false
-    links:
-      GitHub: "https://github.com/Eatkin/PiAudiobook"
 
   - name: "The Zote API"
     category: "Open Source & Side Projects"
@@ -127,38 +114,12 @@ projects:
       GitHub: "https://github.com/Eatkin/zote-api"
       API: "https://zote-api.edwardatkin.co.uk/"
 
-  - name: "Unified Content Platform"
-    category: "Open Source & Side Projects"
-    role: "Fullstack Generalist"
-    problem: "Content scattered across decades, platforms and mediums."
-    solution: "Unified platform indexing 20+ years of work with metadata, tagging, NLP recommendations and RSS feeds."
-    architecture: "Flask/Jinja2 → Firestore → Cloud Storage → RSS/Indexing"
-    tech: [python, flask, firestore, cloud-storage, nlp, RSS]
-    outcome: "Single coherent hub for blogs, galleries, games and archives."
-    internal: false
-    links:
-      GitHub: "https://github.com/Eatkin/unified-site"
-      Website: "https://www.edwardatkin.co.uk"
-
-  - name: "Auld Lang Syne Simulator"
-    category: "Computational Curiosities"
-    role: "Systems Tinkerer"
-    problem: "Wanted to analyse win probabilities and difficulty of Auld Lang Syne solitaire."
-    solution: "Python simulator with recursive backtracking, memoisation and multiprocessing."
-    architecture: "search engine → memo table → multiprocessing worker pool"
-    tech: [python, multiprocessing]
-    outcome: "Sampled 10k+ deals to compare simple vs. perfect strategies; developed scoring system for partial progress and strategy evaluation."
-    internal: false
-    links:
-      GitHub: "https://github.com/Eatkin/auld_lang_syne_sim"
-      Blog: "https://edwardatkin.co.uk/blog/auld_lang_sine"
-
   - name: "Juggling Analytics & Practice System"
     category: "Computational Curiosities"
     role: "Systems Tinkerer"
-    problem: "Juggling progress hard to quantify; avoided difficult patterns; wanted structured practice, progress tracking and structure archive."
+    problem: "Juggling progress hard to quantify; avoided difficult patterns; wanted structured practice and progress tracking."
     solution: "Weighted random practice generator, archival system and analytics."
-    architecture: "CLI →  yaml/csv logs → stats → weighted generator → archival videos"
+    architecture: "CLI → yaml/csv logs → stats → weighted generator → archival videos"
     tech: [python, pandas, csv, yaml]
     outcome: "Improved consistency in advanced patterns (552, 5-ball cascade); historical tracking & analytics."
     internal: false
@@ -167,6 +128,31 @@ projects:
 
 
 work_history:
+  - company: "Green Energy Advice Bureau (GEAB)"
+    role: "Full Stack Developer"
+    location: "Remote / Sunderland"
+    period: "February 2026 – Present"
+    focus:
+      - Document generation services
+      - Lead generation & data pipelines
+      - Full stack web development
+    impact:
+      - "Rewrote legacy TypeScript document generation service in Python (FastAPI, Jinja2, WeasyPrint); deployed via Docker on AWS Lambda with CDK"
+      - "Built web scraping pipeline to generate structured lead data, directly driving sales pipeline value"
+      - "Frontend development on React/TypeScript codebase"
+    technologies:
+      - Python
+      - FastAPI
+      - Jinja2
+      - WeasyPrint
+      - Pydantic
+      - Docker
+      - AWS Lambda
+      - AWS CDK
+      - React
+      - TypeScript
+      - Web Scraping
+
   - company: "Blueskeye AI"
     role: "Data Ops Engineer"
     location: "Nottingham, United Kingdom"
@@ -241,44 +227,24 @@ work_history:
       - Distributed Systems Concepts
       - Socket.io
 
-  - company: "Self-Employed"
-    role: "Indie Game Developer"
-    location: "Remote"
-    period: "May 2017 – January 2024"
+  - company: "Self-Employed / Matlock Brewing Company Ltd"
+    role: "Indie Game Developer / Head Brewer"
+    location: "Remote / Matlock, United Kingdom"
+    period: "March 2015 – January 2024"
     focus:
       - Independent games & interactive experiences
-      - Systems & engine architecture
-      - Full production pipeline (code, design, art, music)
+      - Brewing operations & product development
     impact:
-      - "Developed 'Other Minds', a multi-year project with eight worlds and emergent AI gameplay"
-      - "Awarded Frontpage on Newgrounds with 'A Relaxing Typing Game'"
-      - "Narrative-driven 'Remember Mary' featured in Indiepocalypse Zine"
-      - "Managed programming, engine architecture, art, music and deployment"
+      - "Developed 'Other Minds', a multi-year game project with eight worlds and emergent AI gameplay"
+      - "Awarded Frontpage on Newgrounds with 'A Relaxing Typing Game'; featured in Indiepocalypse Zine"
+      - "Designed and brewed award-winning beers including 'Reverence' ESB at Matlock Brewing Company"
+      - "Built Excel/VBA tooling for cask tracking, till management and sales analytics"
     technologies:
       - GameMaker Studio 2
       - OpenGL
       - Systems Architecture
-      - AI Programming
-      - Narrative Design
-      - Aseprite
-      - Logic Pro X
-
-  - company: "Matlock Brewing Company"
-    role: "Head Brewer"
-    location: "Matlock, United Kingdom"
-    period: "March 2015 – January 2024"
-    focus:
-      - Brewing operations
-      - Product development
-      - Operational analytics & tooling
-    impact:
-      - "Designed and brewed award-winning beers including 'Reverence' ESB"
-      - "Developed Excel/VBA tooling to track cask locations and contents"
-      - "Managed market stalls and events as brand ambassador; created Excel/VBA based scripting for till and sales management."
-    technologies:
       - Brewing techniques
       - Excel & VBA
-      - Event management
 
 
 modes:

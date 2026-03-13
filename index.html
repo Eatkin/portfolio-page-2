@@ -17,7 +17,7 @@
   <header>
     <div class="header-top">
       <div>
-        <span class="emoji">🧪</span>
+        <span class="emoji">🧱</span>
         <h1>Platform &amp; Systems Engineer</h1>
         <div class="tagline">Automation, Internal Tooling, Data Platforms</div>
       </div>
@@ -67,7 +67,7 @@
         <div class="sticker-card">
           <h3>
             Automate
-            <span class="emoji">🕷</span>
+            <span class="emoji">☠️</span>
           </h3>
           <p>Replace manual, fragile processes with pipelines and services.</p>
         </div>
@@ -75,7 +75,7 @@
         <div class="sticker-card">
           <h3>
             Platform
-            <span class="emoji">🤯</span>
+            <span class="emoji">📦</span>
           </h3>
           <p>Tooling and infrastructure that scales teams and workflows.</p>
         </div>
@@ -83,7 +83,7 @@
         <div class="sticker-card">
           <h3>
             Abstract
-            <span class="emoji">♻️</span>
+            <span class="emoji">🖤</span>
           </h3>
           <p>Convert recurring patterns into repeatable systems.</p>
         </div>
@@ -91,7 +91,7 @@
         <div class="sticker-card">
           <h3>
             Observe
-            <span class="emoji">🧪</span>
+            <span class="emoji">✨</span>
           </h3>
           <p>Measure, log, and make invisible complexity visible.</p>
         </div>
@@ -99,7 +99,7 @@
         <div class="sticker-card">
           <h3>
             Own
-            <span class="emoji">⚔️</span>
+            <span class="emoji">🧰</span>
           </h3>
           <p>Take ownership of the stack from concept to production.</p>
         </div>
@@ -134,38 +134,32 @@
     <div class="corkboard-grid">
       
       <div class="polaroid">
-        <div class="polaroid-title">Secure Data Platform API</div>
-        <img src="static/images/secure_data_platform.png" alt="Secure Data Platform API" data-index="1">
-        <div class="caption">Infrastructure diagram for secure data platform API</div>
+        <div class="polaroid-title">Reddit CLI Dashboard</div>
+        <img src="static/images/reddit_cli.png" alt="Reddit CLI Dashboard" data-index="1">
+        <div class="caption">Read-only Reddit from the terminal</div>
       </div>
       
       <div class="polaroid">
-        <div class="polaroid-title">Annotation Platform Suite</div>
-        <img src="static/images/desk.jpg" alt="Annotation Platform Suite" data-index="2">
-        <div class="caption">Having a cup of tea whilst my data processing library does everything</div>
-      </div>
-      
-      <div class="polaroid">
-        <div class="polaroid-title">PiAudiobook</div>
-        <img src="static/images/piaudiobook.png" alt="PiAudiobook" data-index="3">
-        <div class="caption">Offline, voice-controller and FOSS audiobook system powered by Python</div>
+        <div class="polaroid-title">Yarn &amp; Moggy</div>
+        <img src="static/images/yarn_and_moggy.png" alt="Yarn &amp; Moggy" data-index="2">
+        <div class="caption">Custom AWS e-commerce stack for £0.03/month</div>
       </div>
       
       <div class="polaroid">
         <div class="polaroid-title">Juggling Analytics &amp; Practice</div>
-        <img src="static/images/ed_juggling.png" alt="Juggling Analytics &amp; Practice" data-index="4">
+        <img src="static/images/ed_juggling.png" alt="Juggling Analytics &amp; Practice" data-index="3">
         <div class="caption">Mastering juggling patterns in practice</div>
       </div>
       
       <div class="polaroid">
         <div class="polaroid-title">Head Brewer</div>
-        <img src="static/images/reverence.jpg" alt="Head Brewer" data-index="5">
+        <img src="static/images/reverence.jpg" alt="Head Brewer" data-index="4">
         <div class="caption">Our award winning ESB Reverence from my former life as a Head Brewer</div>
       </div>
       
       <div class="polaroid">
         <div class="polaroid-title">Cat Owner</div>
-        <img src="static/images/franks.jpg" alt="Cat Owner" data-index="6">
+        <img src="static/images/franks.jpg" alt="Cat Owner" data-index="5">
         <div class="caption">Frankie the cat</div>
       </div>
       
@@ -184,19 +178,19 @@
       
       <div class="project-card">
         <div class="project-header">
-          <span>SECURITY &amp; INFRA</span>
+          <span>PLATFORMS &amp; TOOLING</span>
           <span>INTERNAL: TRUE</span>
         </div>
         <div class="project-content">
-          <h3>Secure Data Platform API (Prototype)</h3>
+          <h3>Document Generation Service</h3>
           
           <p>
             <strong>Problem:</strong>
-            Fragmented workflows, inconsistent database schema and R&amp;D teams reliant on &#39;snapshot&#39; data requests.
+            Legacy TypeScript document generation service was poorly written, unmaintainable, and difficult to extend for new document types.
           </p>
           <p style="margin-top: 10px;">
             <strong>Solution:</strong>
-            FastAPI gateway with Workload Identity Federation (ADC), user-aware access, SQL-backed database, and Terraform-defined infrastructure. Provides R&amp;D with data &#39;on-tap&#39; for integration into workflows instead of manual snapshots.
+            Rewrote the service in Python (FastAPI, Jinja2, WeasyPrint) with Pydantic-validated models, modular templating via Jinja2 extends/includes, and custom brand CSS. Deployed as a Docker container on AWS Lambda via CDK.
           </p>
           <div class="tech-stack">
             
@@ -204,148 +198,156 @@
             
             <span class="tech-tag">fastapi</span>
             
-            <span class="tech-tag">terraform</span>
+            <span class="tech-tag">jinja2</span>
             
-            <span class="tech-tag">cloud-run</span>
+            <span class="tech-tag">weasyprint</span>
             
-            <span class="tech-tag">cloud-storage</span>
-            
-            <span class="tech-tag">sql</span>
-            
-            <span class="tech-tag">adc</span>
-            
-            <span class="tech-tag">gcp</span>
+            <span class="tech-tag">pydantic</span>
             
             <span class="tech-tag">docker</span>
+            
+            <span class="tech-tag">aws-lambda</span>
+            
+            <span class="tech-tag">aws-cdk</span>
             
           </div>
           <div class="outcome-box">
             <strong>Outcome:</strong>
-            Foundational platform for all company data operations; seamless, identity-based access; principle-of-least-privilege; separation of duties; reliable, integrated R&amp;D workflows.
+            Clean, maintainable service replacing a fragile legacy codebase; consistent branded PDF output; html output for previews; extensible template system for new document types.
           </div>
         </div>
       </div>
       
       <div class="project-card">
         <div class="project-header">
-          <span>PLATFORMS &amp; TOOLING</span>
+          <span>DATA &amp; COMPUTE</span>
           <span>INTERNAL: TRUE</span>
         </div>
         <div class="project-content">
-          <h3>Annotation Platform Suite</h3>
+          <h3>Lead Generation Scraping Pipeline</h3>
           
           <p>
             <strong>Problem:</strong>
-            Existing annotation UI was slow, brittle and experiencing scaling failures. Firestore-based tabular storage hit size limits; tools violated DRY principles and were difficult to maintain.
+            Sales team had no scalable way to identify and qualify leads; prospecting was manual and time-consuming, many phone numbers were disconnected.
           </p>
           <p style="margin-top: 10px;">
             <strong>Solution:</strong>
-            Rebuilt the platform with a SQL backend, class-based architecture, and a highly configurable data processing library. Enabled end-to-end workflows: select datasets, process, upload and mark for annotation in 4 lines of code with no monitoring required.
+            Automated web scraping pipeline to extract, normalise and enrich lead data, feeding structured prospect information directly to the sales team.
           </p>
           <div class="tech-stack">
             
             <span class="tech-tag">python</span>
             
-            <span class="tech-tag">ffmpeg</span>
+            <span class="tech-tag">web-scraping</span>
             
-            <span class="tech-tag">gstreamer</span>
+            <span class="tech-tag">aws</span>
             
-            <span class="tech-tag">sqlite</span>
-            
-            <span class="tech-tag">docker</span>
-            
-            <span class="tech-tag">sql</span>
-            
-            <span class="tech-tag">multiprocessing</span>
-            
-            <span class="tech-tag">cloud-run</span>
+            <span class="tech-tag">data-pipelines</span>
             
           </div>
           <div class="outcome-box">
             <strong>Outcome:</strong>
-            From 2 fragile tools to 30+ stable, extensible tools. Reduced annotation setup &amp; FACS annotation time ~50%. Removed error-prone ad-hoc scripts, enabled rapid scaling and consistent deployment across studies.
+            Directly drove sales pipeline value; replaced manual prospecting; delivered structured, actionable lead data at scale.
           </div>
         </div>
       </div>
       
       <div class="project-card">
         <div class="project-header">
-          <span>PLATFORMS &amp; TOOLING</span>
-          <span>INTERNAL: TRUE</span>
+          <span>PROFESSIONAL SERVICES</span>
+          <span>INTERNAL: FALSE</span>
         </div>
         <div class="project-content">
-          <h3>Multimodal Capture Software</h3>
+          <h3>Yarn &amp; Moggy E-Commerce Platform</h3>
+          
+          <div class="link-sticker-sheet">
+            
+            <a href="https://yarnandmoggy.co.uk" class="punk-link" target="_blank">
+              <span class="emoji">☣️</span>
+              STORE
+            </a>
+            
+          </div>
           
           <p>
             <strong>Problem:</strong>
-            Previous lab capture software was unreliable, poorly synchronised and difficult for non-technical operators.
+            Off-the-shelf e-commerce SaaS (Shopify) cost £25+/month — unjustifiable for a small handmade goods shop.
           </p>
           <p style="margin-top: 10px;">
             <strong>Solution:</strong>
-            Built a fully offline, touchscreen-driven audio/video capture system with multi-camera support. State-machine-based architecture allowed easy integration of additional sensors (e.g., heart rate monitors) and flexible configuration for new study requirements.
+            Built a fully custom e-commerce platform on AWS: static GitHub Pages frontend with Jinja2 templating, FastAPI backend on Lambda, DynamoDB for orders, S3 for assets, Stripe for payments, Resend for transactional email. Infrastructure managed with AWS CDK.
           </p>
           <div class="tech-stack">
             
             <span class="tech-tag">python</span>
             
-            <span class="tech-tag">pygame</span>
+            <span class="tech-tag">fastapi</span>
             
-            <span class="tech-tag">opencv</span>
+            <span class="tech-tag">aws-lambda</span>
             
-            <span class="tech-tag">ffmpeg</span>
+            <span class="tech-tag">dynamodb</span>
             
-            <span class="tech-tag">hardware</span>
+            <span class="tech-tag">s3</span>
             
-            <span class="tech-tag">multiprocessing</span>
+            <span class="tech-tag">stripe</span>
             
-            <span class="tech-tag">state-machine</span>
+            <span class="tech-tag">aws-cdk</span>
+            
+            <span class="tech-tag">jinja2</span>
+            
+            <span class="tech-tag">github-pages</span>
+            
+            <span class="tech-tag">SQS</span>
             
           </div>
           <div class="outcome-box">
             <strong>Outcome:</strong>
-            Supported 3-camera HD AV capture with audio/video sync; simple interface for non-technical operators; standardised and reliable collection for studies with 60+ participants; modular and extensible for future research needs.
+            Replaced £25/month SaaS with a cloud stack costing pennies per month. Full order management, payment processing, and transactional email — purpose-built and owned end to end.
           </div>
         </div>
       </div>
       
       <div class="project-card">
         <div class="project-header">
-          <span>PLATFORMS &amp; TOOLING</span>
-          <span>INTERNAL: TRUE</span>
+          <span>OPEN SOURCE &amp; SIDE PROJECTS</span>
+          <span>INTERNAL: FALSE</span>
         </div>
         <div class="project-content">
-          <h3>Datapool - Prototype Volunteering Platform</h3>
+          <h3>Reddit CLI Dashboard</h3>
+          
+          <div class="link-sticker-sheet">
+            
+            <a href="https://github.com/Eatkin/reddit-cli" class="punk-link" target="_blank">
+              <span class="emoji">🏴</span>
+              GITHUB
+            </a>
+            
+          </div>
           
           <p>
             <strong>Problem:</strong>
-            Existing volunteer sign-ups were slow, manual, error-prone, and unscalable.
+            Wanted intentional, low-noise access to Reddit without the engagement-maximising web UI.
           </p>
           <p style="margin-top: 10px;">
             <strong>Solution:</strong>
-            Privacy-first fullstack platform for study participation with dynamic forms, targeted allocation and admin tooling.
+            Read-only terminal dashboard built with Textual. Parses Reddit&#39;s JSON Feeds and renders a navigable TUI with feeds, post browsing and comment threads.
           </p>
           <div class="tech-stack">
             
             <span class="tech-tag">python</span>
             
-            <span class="tech-tag">flask</span>
+            <span class="tech-tag">textual</span>
             
-            <span class="tech-tag">firestore</span>
+            <span class="tech-tag">tui</span>
             
-            <span class="tech-tag">firebase</span>
+            <span class="tech-tag">reddit-api</span>
             
-            <span class="tech-tag">gcp</span>
-            
-            <span class="tech-tag">nosql</span>
-            
-            <span class="tech-tag">cloud-run</span>
-            
-            <span class="tech-tag">docker</span>
+            <span class="tech-tag">json</span>
             
           </div>
           <div class="outcome-box">
             <strong>Outcome:</strong>
-            Replaced ad-hoc Google Forms; automated participant management; location-based targeting; race-condition-safe allocations; privacy-first design.
+            Clean, distraction-free Reddit access from the terminal; no tracking, no ads, no algorithmic feed manipulation.
           </div>
         </div>
       </div>
@@ -385,52 +387,7 @@
           </div>
           <div class="outcome-box">
             <strong>Outcome:</strong>
-            Fully automated job search; converted unstructured job postings into json data; reduced human workload to decision-making only.
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-header">
-          <span>OPEN SOURCE &amp; SIDE PROJECTS</span>
-          <span>INTERNAL: FALSE</span>
-        </div>
-        <div class="project-content">
-          <h3>PiAudiobook</h3>
-          
-          <div class="link-sticker-sheet">
-            
-            <a href="https://github.com/Eatkin/PiAudiobook" class="punk-link" target="_blank">
-              <span class="emoji">🤯</span>
-              GITHUB
-            </a>
-            
-          </div>
-          
-          <p>
-            <strong>Problem:</strong>
-            Locked to proprietary audiobook ecosystems with cloud voice systems; wanted privacy and offline control.
-          </p>
-          <p style="margin-top: 10px;">
-            <strong>Solution:</strong>
-            Offline audiobook player with voice control and persistent playback.
-          </p>
-          <div class="tech-stack">
-            
-            <span class="tech-tag">python</span>
-            
-            <span class="tech-tag">vosk</span>
-            
-            <span class="tech-tag">sqlite</span>
-            
-            <span class="tech-tag">raspberry-pi</span>
-            
-            <span class="tech-tag">linux</span>
-            
-          </div>
-          <div class="outcome-box">
-            <strong>Outcome:</strong>
-            Fully offline, privacy-first, modular and portable audiobook experience.
+            Fully automated job search; converted unstructured job postings into structured data; reduced human workload to decision-making only.
           </div>
         </div>
       </div>
@@ -446,12 +403,12 @@
           <div class="link-sticker-sheet">
             
             <a href="https://github.com/Eatkin/zote-api" class="punk-link" target="_blank">
-              <span class="emoji">🧪</span>
+              <span class="emoji">☣️</span>
               GITHUB
             </a>
             
             <a href="https://zote-api.edwardatkin.co.uk/" class="punk-link" target="_blank">
-              <span class="emoji">🩸</span>
+              <span class="emoji">📎</span>
               API
             </a>
             
@@ -493,102 +450,6 @@
       
       <div class="project-card">
         <div class="project-header">
-          <span>OPEN SOURCE &amp; SIDE PROJECTS</span>
-          <span>INTERNAL: FALSE</span>
-        </div>
-        <div class="project-content">
-          <h3>Unified Content Platform</h3>
-          
-          <div class="link-sticker-sheet">
-            
-            <a href="https://github.com/Eatkin/unified-site" class="punk-link" target="_blank">
-              <span class="emoji">📎</span>
-              GITHUB
-            </a>
-            
-            <a href="https://www.edwardatkin.co.uk" class="punk-link" target="_blank">
-              <span class="emoji">♻️</span>
-              WEBSITE
-            </a>
-            
-          </div>
-          
-          <p>
-            <strong>Problem:</strong>
-            Content scattered across decades, platforms and mediums.
-          </p>
-          <p style="margin-top: 10px;">
-            <strong>Solution:</strong>
-            Unified platform indexing 20+ years of work with metadata, tagging, NLP recommendations and RSS feeds.
-          </p>
-          <div class="tech-stack">
-            
-            <span class="tech-tag">python</span>
-            
-            <span class="tech-tag">flask</span>
-            
-            <span class="tech-tag">firestore</span>
-            
-            <span class="tech-tag">cloud-storage</span>
-            
-            <span class="tech-tag">nlp</span>
-            
-            <span class="tech-tag">RSS</span>
-            
-          </div>
-          <div class="outcome-box">
-            <strong>Outcome:</strong>
-            Single coherent hub for blogs, galleries, games and archives.
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-header">
-          <span>COMPUTATIONAL CURIOSITIES</span>
-          <span>INTERNAL: FALSE</span>
-        </div>
-        <div class="project-content">
-          <h3>Auld Lang Syne Simulator</h3>
-          
-          <div class="link-sticker-sheet">
-            
-            <a href="https://github.com/Eatkin/auld_lang_syne_sim" class="punk-link" target="_blank">
-              <span class="emoji">🖤</span>
-              GITHUB
-            </a>
-            
-            <a href="https://edwardatkin.co.uk/blog/auld_lang_sine" class="punk-link" target="_blank">
-              <span class="emoji">🧱</span>
-              BLOG
-            </a>
-            
-          </div>
-          
-          <p>
-            <strong>Problem:</strong>
-            Wanted to analyse win probabilities and difficulty of Auld Lang Syne solitaire.
-          </p>
-          <p style="margin-top: 10px;">
-            <strong>Solution:</strong>
-            Python simulator with recursive backtracking, memoisation and multiprocessing.
-          </p>
-          <div class="tech-stack">
-            
-            <span class="tech-tag">python</span>
-            
-            <span class="tech-tag">multiprocessing</span>
-            
-          </div>
-          <div class="outcome-box">
-            <strong>Outcome:</strong>
-            Sampled 10k+ deals to compare simple vs. perfect strategies; developed scoring system for partial progress and strategy evaluation.
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-header">
           <span>COMPUTATIONAL CURIOSITIES</span>
           <span>INTERNAL: FALSE</span>
         </div>
@@ -598,7 +459,7 @@
           <div class="link-sticker-sheet">
             
             <a href="https://edwardatkin.co.uk/blog/data_juggling" class="punk-link" target="_blank">
-              <span class="emoji">⚔️</span>
+              <span class="emoji">🚀</span>
               BLOG
             </a>
             
@@ -606,7 +467,7 @@
           
           <p>
             <strong>Problem:</strong>
-            Juggling progress hard to quantify; avoided difficult patterns; wanted structured practice, progress tracking and structure archive.
+            Juggling progress hard to quantify; avoided difficult patterns; wanted structured practice and progress tracking.
           </p>
           <p style="margin-top: 10px;">
             <strong>Solution:</strong>
@@ -634,6 +495,67 @@
   </section>
   <section id="work">
     <h2 class="section-title">History</h2>
+    
+    <div class="work-item">
+      <h3 class="company-name">Green Energy Advice Bureau (GEAB)</h3>
+      <p class="role">
+        <em>Full Stack Developer — Remote / Sunderland</em>
+        
+        <span class="period">(February 2026 – Present)</span>
+        
+      </p>
+      
+      <ul class="focus-list">
+        
+        <li>🡆 Document generation services</li>
+        
+        <li>🡆 Lead generation &amp; data pipelines</li>
+        
+        <li>🡆 Full stack web development</li>
+        
+      </ul>
+      
+
+    
+      <div class="outcome-box">
+        
+        <li class="outcome-list">• Rewrote legacy TypeScript document generation service in Python (FastAPI, Jinja2, WeasyPrint); deployed via Docker on AWS Lambda with CDK</li>
+        
+        <li class="outcome-list">• Built web scraping pipeline to generate structured lead data, directly driving sales pipeline value</li>
+        
+        <li class="outcome-list">• Frontend development on React/TypeScript codebase</li>
+        
+      </div>
+      
+
+    
+      <div class="tech-stack">
+        
+        <span class="tech-tag">Python</span>
+        
+        <span class="tech-tag">FastAPI</span>
+        
+        <span class="tech-tag">Jinja2</span>
+        
+        <span class="tech-tag">WeasyPrint</span>
+        
+        <span class="tech-tag">Pydantic</span>
+        
+        <span class="tech-tag">Docker</span>
+        
+        <span class="tech-tag">AWS Lambda</span>
+        
+        <span class="tech-tag">AWS CDK</span>
+        
+        <span class="tech-tag">React</span>
+        
+        <span class="tech-tag">TypeScript</span>
+        
+        <span class="tech-tag">Web Scraping</span>
+        
+      </div>
+      
+    </div>
     
     <div class="work-item">
       <h3 class="company-name">Blueskeye AI</h3>
@@ -817,11 +739,11 @@
     </div>
     
     <div class="work-item">
-      <h3 class="company-name">Self-Employed</h3>
+      <h3 class="company-name">Self-Employed / Matlock Brewing Company Ltd</h3>
       <p class="role">
-        <em>Indie Game Developer — Remote</em>
+        <em>Indie Game Developer / Head Brewer — Remote / Matlock, United Kingdom</em>
         
-        <span class="period">(May 2017 – January 2024)</span>
+        <span class="period">(March 2015 – January 2024)</span>
         
       </p>
       
@@ -829,9 +751,7 @@
         
         <li>🡆 Independent games &amp; interactive experiences</li>
         
-        <li>🡆 Systems &amp; engine architecture</li>
-        
-        <li>🡆 Full production pipeline (code, design, art, music)</li>
+        <li>🡆 Brewing operations &amp; product development</li>
         
       </ul>
       
@@ -839,13 +759,13 @@
     
       <div class="outcome-box">
         
-        <li class="outcome-list">• Developed &#39;Other Minds&#39;, a multi-year project with eight worlds and emergent AI gameplay</li>
+        <li class="outcome-list">• Developed &#39;Other Minds&#39;, a multi-year game project with eight worlds and emergent AI gameplay</li>
         
-        <li class="outcome-list">• Awarded Frontpage on Newgrounds with &#39;A Relaxing Typing Game&#39;</li>
+        <li class="outcome-list">• Awarded Frontpage on Newgrounds with &#39;A Relaxing Typing Game&#39;; featured in Indiepocalypse Zine</li>
         
-        <li class="outcome-list">• Narrative-driven &#39;Remember Mary&#39; featured in Indiepocalypse Zine</li>
+        <li class="outcome-list">• Designed and brewed award-winning beers including &#39;Reverence&#39; ESB at Matlock Brewing Company</li>
         
-        <li class="outcome-list">• Managed programming, engine architecture, art, music and deployment</li>
+        <li class="outcome-list">• Built Excel/VBA tooling for cask tracking, till management and sales analytics</li>
         
       </div>
       
@@ -859,58 +779,9 @@
         
         <span class="tech-tag">Systems Architecture</span>
         
-        <span class="tech-tag">AI Programming</span>
-        
-        <span class="tech-tag">Narrative Design</span>
-        
-        <span class="tech-tag">Aseprite</span>
-        
-        <span class="tech-tag">Logic Pro X</span>
-        
-      </div>
-      
-    </div>
-    
-    <div class="work-item">
-      <h3 class="company-name">Matlock Brewing Company</h3>
-      <p class="role">
-        <em>Head Brewer — Matlock, United Kingdom</em>
-        
-        <span class="period">(March 2015 – January 2024)</span>
-        
-      </p>
-      
-      <ul class="focus-list">
-        
-        <li>🡆 Brewing operations</li>
-        
-        <li>🡆 Product development</li>
-        
-        <li>🡆 Operational analytics &amp; tooling</li>
-        
-      </ul>
-      
-
-    
-      <div class="outcome-box">
-        
-        <li class="outcome-list">• Designed and brewed award-winning beers including &#39;Reverence&#39; ESB</li>
-        
-        <li class="outcome-list">• Developed Excel/VBA tooling to track cask locations and contents</li>
-        
-        <li class="outcome-list">• Managed market stalls and events as brand ambassador; created Excel/VBA based scripting for till and sales management.</li>
-        
-      </div>
-      
-
-    
-      <div class="tech-stack">
-        
         <span class="tech-tag">Brewing techniques</span>
         
         <span class="tech-tag">Excel &amp; VBA</span>
-        
-        <span class="tech-tag">Event management</span>
         
       </div>
       
@@ -918,7 +789,7 @@
     
   </section>
   <footer>
-    <span class="emoji">📡</span>
+    <span class="emoji">🧠</span>
     <p style="margin: 20px 0;">Build with Python & Chaos.</p>
     <p style="font-size: 0.7rem; color: #fff;">
       &copy;
